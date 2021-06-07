@@ -4,13 +4,14 @@ using System.Drawing;           // NOTE: Project + Add Reference required
 using System.Windows.Forms;     // NOTE: Project + Add Reference required
 using System.Runtime.InteropServices;
 using ConsoleHelperLib;
+using System.Diagnostics;
 
 namespace ConsoleHelperLib
 {
     public static partial class ConsoleUtils
     {
         // P/Invoke declarations
-        private struct RECT { public int left, top, right, bottom; }
+        //private struct RECT { public int left, top, right, bottom; }
         //[DllImport("kernel32.dll", SetLastError = true)]
         //private static extern IntPtr GetConsoleWindow();
         [DllImport("user32.dll", SetLastError = true)]
