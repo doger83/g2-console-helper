@@ -3,6 +3,45 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <Authors>Dominic Gerweck</Authors>
+    <Company>g2-Devs</Company>
+    <Product>ConsoleHelperLibrary</Product>
+    <PackageReleaseNotes>Happy coding!</PackageReleaseNotes>
+    <PackageIcon>die-midgard-saga-federkleid-rahmen-weiss-frauen-premium-t-shirt.jpg</PackageIcon>
+    <PackageIconUrl />
+    <PackageTags>pinvoke console kernel32 user32 helper dllimports c++ c#</PackageTags>
+    <Version>1.0.1</Version>
+    <Description>A small library to import the c++ console to c#. 
+Actual functionality is writing output in the console window.</Description>
+    <Copyright>Dominic Gerweck</Copyright>
+    <PackageLicenseExpression>Free to use</PackageLicenseExpression>
+    <PackageProjectUrl>https://www.dominic-gerweck.de</PackageProjectUrl>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\MidgardSaga\source\Images\die-midgard-saga-federkleid-rahmen-weiss-frauen-premium-t-shirt.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
 
 </Project>
