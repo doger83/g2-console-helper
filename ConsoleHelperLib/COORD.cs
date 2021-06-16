@@ -1,4 +1,4 @@
-﻿namespace ConsoleHelperLib.pInvoke
+﻿namespace ConsoleHelperLib
 {
     internal class COORD
     {

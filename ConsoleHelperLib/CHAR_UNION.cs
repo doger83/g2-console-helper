@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace ConsoleHelperLib.pInvoke
+namespace ConsoleHelperLib
 {
     [StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
     public struct CHAR_UNION
