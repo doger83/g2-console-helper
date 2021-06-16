@@ -23,13 +23,6 @@ Actual functionality is writing output in the console window.</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\MidgardSaga\source\Images\die-midgard-saga-federkleid-rahmen-weiss-frauen-premium-t-shirt.jpg">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Properties\Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>

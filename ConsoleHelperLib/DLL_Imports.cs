@@ -4,21 +4,12 @@ using System.Runtime.InteropServices;
 
 namespace ConsoleHelperLib.pInvoke
 {
+    /// <include file='Docs/Documentation.xml' path='docs/members[@name="DLL_Imports"]/DLL_Imports/*'/>
     public static class DLL_Imports
     {
         #region kernel32.dll
 
-        /// <summary>
-        /// Writes character and color attribute data to a specified rectangular block of character cells 
-        /// in a console screen buffer. The data to be written is taken from a correspondingly sized rectangular 
-        /// block at a specified location in the source buffer.
-        /// </summary>
-        /// <param name="hConsoleOutput">A handle to the console screen buffer. The handle must have the <b>GENERIC_WRITE</b> access right. For more information, see <a href="https://docs.microsoft.com/en-us/windows/console/console-buffer-security-and-access-rights">Console Buffer Security and Access Rights</a>.</param>
-        /// <param name="lpBuffer">The data to be written to the console screen buffer. This pointer is treated as the origin of a two-dimensional array of <see cref="CHAR_INFO"/> structures whose size is specified by the dwBufferSize parameter.</param>
-        /// <param name="dwBufferSize">The size of the buffer pointed to by the lpBuffer parameter, in character cells. The X member of the <see cref="COORD"/> structure is the number of columns; the Y member is the number of rows.</param>
-        /// <param name="dwBufferCoord"></param>
-        /// <param name="lpWriteRegion"></param>
-        /// <returns></returns>
+        /// <include file='Docs/Documentation.xml' path='docs/members[@name="DLL_Imports"]/WriteConsoleOutput/*'/>
         [DllImport("Kernel32.dll", SetLastError = true)]
         static extern bool WriteConsoleOutput(
             SafeFileHandle hConsoleOutput,
@@ -74,8 +65,9 @@ namespace ConsoleHelperLib.pInvoke
         /// <param name="rc">A pointer to a <seealso cref="RECT"/> structure that receives the screen coordinates of the upper-left and lower-right corners of the window.</param>: 
         /// <returns>
         /// If the function succeeds, the return value is nonzero.
-        /// If the function fails, the return value is zero. To get extended error information, call <see cref="GetLastError()"/>.
-        /// </returns>
+        /// If the function fails, the return value is zero. To get extended error information, 
+        /// call <a href="https://docs.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror">GetLastError()</a>.
+        ///</returns>
         [DllImport("user32.dll", SetLastError = true, ExactSpelling = true, EntryPoint = "GetWindowRect")]
         public static extern bool GetWindowRect(IntPtr hWnd, out RECT rc);
 
@@ -116,8 +108,9 @@ namespace ConsoleHelperLib.pInvoke
         /// <param name="uFlags">The window sizing and positioning flags.</param>
         /// <returns>
         /// If the function succeeds, the return value is nonzero.
-        /// If the function fails, the return value is zero.To get extended error information, call <see cref="GetLastError()"/>.
-        /// </returns>
+        /// If the function fails, the return value is zero. To get extended error information, 
+        /// call <a href="https://docs.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror">GetLastError()</a>.
+        ///</returns>
         [DllImport("user32.dll", SetLastError = true, ExactSpelling = true, EntryPoint = "SetWindowPos")]
         public static extern IntPtr SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
 
@@ -155,9 +148,9 @@ namespace ConsoleHelperLib.pInvoke
         /// <param name="bRepaint">Indicates whether the window is to be repainted. If this parameter is TRUE, the window receives a message. If the parameter is FALSE, no repainting of any kind occurs. This applies to the client area, the nonclient area (including the title bar and scroll bars), and any part of the parent window uncovered as a result of moving a child window.</param>
         /// <returns>
         /// If the function succeeds, the return value is nonzero.
-        /// If the function fails, the return value is zero.To get extended error information, 
-        /// call <see cref="GetLastError()"/>.
-        /// </returns>
+        /// If the function fails, the return value is zero. To get extended error information, 
+        /// call <a href="https://docs.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror">GetLastError()</a>.
+        ///</returns>
         [DllImport("user32.dll", SetLastError = true, ExactSpelling = true, EntryPoint = "MoveWindow")]
         public static extern bool MoveWindow(IntPtr hWnd, int X, int Y, int nWidth, int nHeight, bool bRepaint);
 

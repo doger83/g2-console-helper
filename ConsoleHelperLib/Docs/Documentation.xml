@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<docs>
+  <members name="DLL_Imports">
+    <DLL_Imports>
+      <summary>
+        A static class for importing DLL´s from the native Kernel32 and User32 library.
+      </summary>
+    </DLL_Imports>
+    <WriteConsoleOutput>
+      <summary>
+
+        Writes character and color attribute data to a specified rectangular block of character cells
+        in a console screen buffer. The data to be written is taken from a correspondingly sized rectangular
+        block at a specified location in the source buffer.
+        <para>
+          <see cref="SafeFileHandle"/>
+          <paramref name="hConsoleOutput"/>:
+          A handle to the console screen buffer. The handle must have the <b>GENERIC_WRITE</b> access right.
+          For more information, see
+          <a href="https://docs.microsoft.com/en-us/windows/console/console-buffer-security-and-access-rights">Console Buffer Security and Access Rights</a>.
+        </para>
+        <para>
+          <see cref="CHAR_INFO"/>
+          <paramref name="lpBuffer"/>:
+          The data to be written to the console screen buffer.
+          This pointer is treated as the origin of a two-dimensional array of
+          <a href="https://docs.microsoft.com/de-de/windows/console/char-info-str">CHAR_INFO</a> structures whose size is specified by the dwBufferSize parameter.
+        </para>
+        <para>
+          <see cref="COORD"/>
+          <paramref name="dwBufferSize"/>:
+          The size of the buffer pointed to by the lpBuffer parameter, in character cells.
+          The X member of the <a href="https://docs.microsoft.com/en-us/windows/console/coord-str">COORD</a> structure is the number of columns;
+          the Y member is the number of rows.
+        </para>
+        <para>
+          <see cref="COORD"/>
+          <paramref name="dwBufferCoord"/>:
+          The coordinates of the upper-left cell in the buffer pointed to by the lpBuffer parameter.
+          The X member of the <a href="https://docs.microsoft.com/en-us/windows/console/coord-str">COORD</a> structure is the column, a
+          nd the Y member is the row.
+        </para>
+        <para>
+          <see cref="SMALL_RECT"/>
+          <paramref name="lpWriteRegion"/>:
+          A pointer to a <a href="https://docs.microsoft.com/en-us/windows/console/small-rect-str">SMALL_RECT</a> structure.
+          On input, the structure members specify the upper-left and lower-right coordinates of the console screen buffer rectangle to write to.
+          On output, the structure members specify the actual rectangle that was used.
+        </para>
+        <param name="hConsoleOutput">
+          A handle to the console screen buffer. The handle must have the <b>GENERIC_WRITE</b> access right.
+          For more information, see <a href="https://docs.microsoft.com/en-us/windows/console/console-buffer-security-and-access-rights">Console Buffer Security and Access Rights</a>.
+        </param>
+        <param name="lpBuffer">
+          The data to be written to the console screen buffer.
+          This pointer is treated as the origin of a two-dimensional array of <a href="https://docs.microsoft.com/de-de/windows/console/char-info-str">CHAR_INFO</a> structures
+          whose size is specified by the dwBufferSize parameter.
+        </param>
+        <param name="dwBufferSize">
+          The size of the buffer pointed to by the lpBuffer parameter, in character cells. T
+          he X member of the <a href="https://docs.microsoft.com/en-us/windows/console/coord-str">COORD</a> structure is the number of columns;
+          the Y member is the number of rows.
+        </param>
+        <param name="dwBufferCoord">
+          The coordinates of the upper-left cell in the buffer pointed to by the lpBuffer parameter.
+          The X member of the <a href="https://docs.microsoft.com/en-us/windows/console/coord-str">COORD</a> structure is the column,
+          and the Y member is the row.
+        </param>
+        <param name="lpWriteRegion">
+          A pointer to a <a href="https://docs.microsoft.com/en-us/windows/console/small-rect-str">SMALL_RECT</a> structure.
+          On input, the structure members specify the upper-left and lower-right coordinates of the console screen buffer rectangle to write to.
+          On output, the structure members specify the actual rectangle that was used.
+        </param>
+
+
+      </summary>
+    </WriteConsoleOutput>
+
+
+  </members>
+
+</docs>
